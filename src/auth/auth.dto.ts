@@ -3,6 +3,7 @@ import {
   IsEmail,
   IsNotEmpty,
   IsNumber,
+  IsOptional,
   IsString,
   Matches,
   Max,
@@ -12,6 +13,7 @@ import {
 } from 'class-validator';
 
 export class SignupDto {
+  @IsOptional()
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
